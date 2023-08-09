@@ -6,6 +6,7 @@ import { CgMenuRight, CgClose } from 'react-icons/cg'
 import { useTheme } from 'next-themes'
 import { Link as ScrollLink } from 'react-scroll'
 import { FiSun, FiMoon } from 'react-icons/fi'
+import { AiFillHome } from "react-icons/ai"
 import Link from 'next/link'
 import { ClipLoader } from 'react-spinners'
 
@@ -41,7 +42,7 @@ const Header = () => {
         <header className={`backdrop-filter backdrop-blur-lg ${scroll ? 'border-b bg-white bg-opacity-40' : 'border-b-0'} dark:bg-grey-900 dark:bg-opacity-40 border-gray-200 dark:border-b-0 z-30 min-w-full flex flex-col fixed`}>
             <nav className='lg:w-11/12 2xl:w-4/5 w-full md:px-6 2xl:px-0 mx-auto py-4 hidden sm:flex items-center justify-between'>
                 <Link href={'/'} className={`2xl:ml-6 ${theme === "dark" ? "hover:text-violet-500" : "hover:text-rose-700"} transition-colors duration-200`}>
-                    Logo
+                    <AiFillHome size={25} />
                 </Link>
                 <ul className='flex items-center gap-8'>
                     {navs.map((e, i) => (
@@ -68,7 +69,7 @@ const Header = () => {
             </nav>
 
             <nav className='p-4 flex sm:hidden items-center justify-between'>
-                Logo
+                <AiFillHome size={25} />
                 <div className='flex items-center gap-4'>
                     <span className='hover:scale-110 rounded-full cursor-pointer transition duration-200'>
                         <a target='_blank' href='https://github.com/KrinsKumar'><BsGithub size={25}/></a>
