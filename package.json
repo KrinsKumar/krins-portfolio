@@ -25,8 +25,7 @@
     "react-scroll": "^1.8.9",
     "react-spinners": "^0.13.8",
     "tailwindcss": "3.3.3",
-    "typescript": "5.1.6",
-    "typewriter-effect": "^2.20.1"
+    "typescript": "5.1.6"
   },
   "devDependencies": {
     "@types/react-scroll": "^1.8.7",

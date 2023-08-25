@@ -49,10 +49,11 @@ const Header = () => {
                             <ScrollLink
                                 className={`${theme === "dark" ? "hover:text-violet-500" : "hover:text-rose-700"} transition-colors capitalize cursor-pointer`}
                                 to={e}
-                                offset={-60}
+                                offset={-30}
                                 smooth={true}
                                 duration={500}
                                 isDynamic={true}
+                                spy={true}
                             >
                                 {e}
                             </ScrollLink>
@@ -83,13 +84,13 @@ const Header = () => {
             <div className={`flex min-h-screen w-screen absolute md:hidden top-0 ${!navCollapse ? 'right-0' : 'right-[-100%]'} bottom-0 z-50 ease-in duration-200`}>
                 <div className="w-1/4" onClick={() => setNavCollapse(true)}></div>
 
-                <div className="flex flex-col p-4 gap-5 bg-gray-100/95 backdrop-filter backdrop-blur-sm dark:bg-grey-900/95 w-3/4">
+                <div className={`flex flex-col p-4 gap-5 ${theme == "dark" ? "bg-gray-900/95" : "bg-gray-100/95"} backdrop-filter backdrop-blur-sm  w-3/4`}>
                     <CgClose className='self-end my-2' size={20} onClick={() => setNavCollapse(true)} />
 
                     {navs.slice(0, 4).map((e) => (
                         <ScrollLink
                             key={e}
-                            className={`${theme === "dark" ? "hover:text-violet-500" : "hover:text-rose-700"} py-1.5 px-4 rounded transition-colors capitalize cursor-pointer`}
+                            className={`${theme === "dark" ? "hover:text-indigo-600" : "hover:text-violet-700"} py-1.5 px-4 rounded transition-colors capitalize cursor-pointer`}
                             to={e}
                             offset={-60}
                             smooth={true}
@@ -101,12 +102,12 @@ const Header = () => {
                         </ScrollLink>
                     ))}
                     <ScrollLink
-                        to='contact'
+                        to='Contact'
                         offset={-60}
                         smooth={true}
                         duration={500}
                         onClick={() => setNavCollapse(true)}
-                        className={`px-6 py-1.5 rounded-md ${theme === "dark" ? "hover:text-violet-500" : "hover:text-rose-700"} text-white text-center`}>
+                        className={`px-6 py-1.5 rounded-md ${theme === "dark" ? "bg-indigo-600 hover:bg-indigo-500" : "bg-violet-700 hover:bg-violet-600"} transition text-white text-center`}>
                         Contact
                     </ScrollLink>
                 </div>
