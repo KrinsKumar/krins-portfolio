@@ -183,7 +183,7 @@ export let projects:{
         gh: "https://github.com/KrinsKumar/spring-security-JWT",
         demo: undefined,
         title: "Angular-Netflix Homepage",
-        skills: ["angular", "bootstrap", "typescript", "html],
+        skills: ["angular", "bootstrap", "typescript", "html"],
         image: "nutflix",
         description: "TO BE UPDATED, image and gh and demo"
     },{
