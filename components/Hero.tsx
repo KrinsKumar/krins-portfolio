@@ -40,7 +40,9 @@ const Hero = () => {
                 </div>
 
                 <div className="mt-5 max-w-3xl text-center mx-auto">
-                <p className={`text-lg text-gray-600 ${theme == "dark" ? "dark:text-gray-400" : ""}`} >I am an enthusiastic, and fast learning software developer student, specializing in full stack development.</p>
+                <p className={`text-lg text-gray-600 ${theme == "dark" ? "dark:text-gray-400" : ""}`} >
+                    I am an enthusiastic, and fast learning <span className={`${theme == "dark" ? "text-indigo-600" : "text-violet-700"} font-bold`}>software developer</span> student based in Toronto, specializing in full stack development.
+                    </p>
                 </div>
 
                 <div className="z-50 mt-8 grid gap-3 w-full sm:inline-flex cursor-pointer sm:justify-center hover:scale-105 transition">
