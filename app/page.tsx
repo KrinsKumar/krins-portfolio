@@ -1,11 +1,17 @@
-import HomePage from "./HomePage";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Skills from "@/components/Skills"
+import Projects from "@/components/Projects"
 
-const Home = () => {
+const Page = () => {
     return (
         <div>
-            <HomePage />
+            <Header />
+            <Hero />
+            <Skills />
+            <Projects />
         </div>
     );
 }
 
-export default Home;
+export default Page;

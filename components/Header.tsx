@@ -21,7 +21,7 @@ const Header = () => {
         setMounted(true)
         const updateScroll = () => {
             window.scrollY >= 90 ? setScroll(true) : setScroll(false)
-            console.log(window.scrollY)
+           // console.log(window.scrollY)
         }
         window.addEventListener('scroll', updateScroll)
     }, [])

@@ -1,80 +1,95 @@
 "use client"
 
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+
+import { skills as AllSkill } from "@/public/data"
 
 const Skills = () => {
 
     const { theme, setTheme } = useTheme();
     const [selected, setSelected] = useState("all")
+    const [skills, setSkills] = useState<{name:string, src:string, category:string[]}[]>([]);
+    const [mounted, setMounted] = useState(false)
 
-    const frontClicked = () => {
-        setSelected("front")
+    useEffect(() => {
+        setMounted(true)
+        setSkills(() => {
+            return AllSkill.filter(skill => !skill.category.includes("misc"))
+        })
+    }, [setTheme, theme])
+
+    if (!mounted) return null
+
+    function updateSKill(category:string) {
+        if (category == "all") {
+            setSkills(() => {
+                return AllSkill.filter(skill => !skill.category.includes("misc"))
+            })
+        }
+        else {
+            setSkills(() => {
+                return AllSkill.filter(skill => skill.category.includes(category))
+            })
+        }
     }
-    const backClicked = () => {
-        setSelected("back")
-    }
-    const MiscClicked = () => {
-        setSelected("misc")
-    }
-    const allClicked = () => {
-        setSelected("all")
+
+    function buttonClicked(button:string) {
+        setSelected(button)
+        updateSKill(button)
     }
 
     return (
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <div className="sm:w-1/2 xl:w-1/3 mx-auto text-center mb-6">
-                <h2 className={`text-xl font-semibold md:text-2xl md:leading-tight text-gray-800 ${theme == "dark" ? "dark:text-gray-200" : ""}`}>Skills()</h2>
+                <h2 className={`text-xl font-semibold md:text-2xl md:leading-tight ${theme == "dark" ? "text-gray-200" : "text-gray-800"}`}>Skills()</h2>
 
-                <div className="grid grid-cols-12 sm:flex sm:justify-center gap-6 sm:gap-x-12 lg:gap-x-20 mt-8">
+                <div className="grid grid-cols-12 sm:flex sm:justify-center gap-6 sm:gap-x-12 lg:gap-x-20 mt-4">
                     <div className="col-span-6 text-center">
-                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:rotate-2 hover:scale-110 border border-indigo-600 ${selected == "all" ? "bg-indigo-600 text-white" : "text-indigo-600"}`} onClick={allClicked}>
+                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:scale-110 ${theme == "dark" ? "text-white" : "text-black"} border border-indigo-600 ${selected == "all" ? "bg-indigo-600" : ""}`} onClick={() => {buttonClicked("all")}}>
+                            <span className="sm:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                             All()
+                            <span className="sm:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         </button>
                     </div>
                     <div className="col-span-6 text-center">
-                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:rotate-2 hover:scale-110 border border-indigo-600 ${selected == "front" ? "bg-indigo-600 text-white" : "text-indigo-600"}`} onClick={frontClicked}>
+                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:scale-110 ${theme == "dark" ? "text-white" : "text-black"} border border-indigo-600 ${selected == "front" ? "bg-indigo-600" : ""}`} onClick={() => {buttonClicked("front")}}>
                             FrontEnd()
                         </button>
                     </div>
-
                     <div className="col-span-6 text-center">
-                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:rotate-2 hover:scale-110 border border-indigo-600 ${selected == "back" ? "bg-indigo-600 text-white" : "text-indigo-600"}`}onClick={backClicked}>
+                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:scale-110 ${theme == "dark" ? "text-white" : "text-black"} border border-indigo-600 ${selected == "back" ? "bg-indigo-600" : ""}`}onClick={() => {buttonClicked("back")}}>
                             BackEnd()
                         </button>
                     </div>
-
                     <div className="col-span-6 text-center">
-                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:rotate-2 hover:scale-110 border border-indigo-600 ${selected == "misc" ? "bg-indigo-600 text-white" : "text-indigo-600"}`} onClick={MiscClicked}>
+                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:scale-110 ${theme == "dark" ? "text-white" : "text-black"} border border-indigo-600 ${selected == "misc" ? "bg-indigo-600" : ""}`} onClick={() => {buttonClicked("misc")}}>
+                        <span className="sm:hidden">&nbsp;&nbsp;&nbsp;&nbsp;</span>
                             Misc()
+                        <span className="sm:hidden">&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         </button>
                     </div>
                 </div>
 
             </div>
-            <div className="my-8 md:my-16 grid grid-cols-3 sm:flex sm:justify-center gap-6 sm:gap-x-12 lg:gap-x-20">
-                <div className="flex-shrink-0 transition duration-400 hover:-translate-y-1 grayscale-[65%] hover:grayscale-0">
-                    <Image width={48} height={48} src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>
-                </div>
-                <div className="flex-shrink-0 transition duration-400 hover:-translate-y-1 grayscale-[65%] hover:grayscale-0">
-                    <Image width={48} height={48} src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>
-                </div>
-                <div className="flex-shrink-0 transition duration-400 hover:-translate-y-1 grayscale-[65%] hover:grayscale-0">
-                    <Image width={48} height={48} src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>
-                </div>
-                <div className="flex-shrink-0 transition duration-400 hover:-translate-y-1 grayscale-[65%] hover:grayscale-0">
-                    <Image width={48} height={48} src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>
-                </div>
-                <div className="flex-shrink-0 transition duration-400 hover:-translate-y-1 grayscale-[65%] hover:grayscale-0">
-                    <Image width={48} height={48} src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>
-                </div>
-                <div className="flex-shrink-0 transition duration-400 hover:-translate-y-1 grayscale-[65%] hover:grayscale-0">
-                    <Image width={48} height={48} src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>
-                </div>
+            <div className="my-8 flex justify-center flex-wrap gap-6 sm:gap-x-12 lg:gap-x-20">
+                {
+                    skills.map(skill => (
+                        <div key={skill.name} className="flex-shrink-0 transition duration-400 hover:-translate-y-1">
+                            <div>
+                                <Image width={48} height={48} src={`skills/${skill.src}.svg`} alt={skill.name} className="mb-1 mx-auto bg-gray-700/10 rounded-full p-1"/>
+                                <div className="text-center">
+                                    {skill.name}
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
         </div>
     )
 }
 
 export default Skills;
+

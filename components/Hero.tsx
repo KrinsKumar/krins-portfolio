@@ -23,13 +23,13 @@ const Hero = () => {
             }
             <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pb-10">
                 <div className="flex justify-center">
-                <a target='_blank' href='https://github.com/KrinsKumar' className={`z-50 inline-flex items-center border gap-x-2 ${theme == "light" ? "bg-white border-gray-200 hover:border-gray-300 text-gray-600" : "dark:bg-gray-800  dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-400"} text-xs  p-2 px-3 rounded-full transition`}>
+                <a target='_blank' href='https://github.com/KrinsKumar' className={`z-50 inline-flex items-center border gap-x-2 ${theme == "light" ? "bg-white border-gray-200 hover:border-gray-300 text-gray-600" : "bg-gray-800  border-gray-700 hover:border-gray-600 text-gray-400"} text-xs  p-2 px-3 rounded-full transition`}>
                     Explore my Github
                     <span className="flex items-center gap-x-1">
                     <span className={`border-l border-gray-200 text-blue-600 pl-2 ${theme == "dark" ? "dark:text-blue-500" : ""}`}>Explore</span>
-                    <svg className={`w-2.5 h-2.5 text-blue-600 ${theme == "dark" ? "dark:text-blue-500" : ""}`} width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
+                        <svg className={`w-2.5 h-2.5 text-blue-600 ${theme == "dark" ? "dark:text-blue-500" : ""}`} width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </span>
                 </a>
                 </div>
