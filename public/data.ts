@@ -182,8 +182,8 @@ export let projects:{
     },{
         gh: "https://github.com/KrinsKumar/spring-security-JWT",
         demo: undefined,
-        title: "Angular-Netflix Homepage",
-        skills: ["angular", "bootstrap", "typescript", "html"],
+        title: "Angular-Netflix",
+        skills: ["angularjs", "ts", "bootstrap", "html"],
         image: "nutflix",
         description: "TO BE UPDATED, image and gh and demo"
     },{
@@ -201,6 +201,20 @@ export let projects:{
         image: "landing",
         description: "A landing page using React"
     },{
+        gh: "https://github.com/KrinsKumar/spring-firstProject",
+        demo: undefined,
+        title: "Spring RestAPI",
+        skills: ["java", "sb", "postgres", "docker"],
+        image: "simple",
+        description: "My First Spring Boot with PostgreSQL and Docker"
+    },{
+        gh: "https://github.com/KrinsKumar/movies-API",
+        demo: undefined,
+        title: "Movies API - Node",
+        skills: ["nodejs", "mongodb"],
+        image: "movies",
+        description: "An API for movies"
+    },{
         gh: "https://github.com/KrinsKumar/Responsive-dashboard",
         demo: "https://krinskumar.github.io/Responsive-dashboard/",
         title: "Vanilla Dashboard",
@@ -208,26 +222,12 @@ export let projects:{
         image: "responsive",
         description: "Responsive Dashboard on gh-pages"
     },{
-        gh: "https://github.com/KrinsKumar/spring-firstProject",
-        demo: undefined,
-        title: "Spring Simple API",
-        skills: ["java", "sb", "postgres", "docker"],
-        image: "simple",
-        description: "My First Spring Boot with PostgreSQL and Docker"
-    },{
-        gh: "https://github.com/KrinsKumar/movies-API",
-        demo: undefined,
-        title: "Movies API",
-        skills: ["nodejs", "mongodb"],
-        image: "movies",
-        description: "An API for movies"
-    },{
         gh: "https://github.com/KrinsKumar/krins-portfolio",
         demo: undefined,
         title: "This Portfolio",
         skills: ["next", "ts", "tailwind"],
         image: "portfolio",
-        description: "The portfolio that you are on right now"
+        description: "This portflio you are on."
     },{
         gh: "https://github.com/KrinsKumar/sketch.io",
         demo: "https://krinskumar.github.io/sketch.io/",

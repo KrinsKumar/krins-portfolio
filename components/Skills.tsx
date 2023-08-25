@@ -47,24 +47,24 @@ const Skills = () => {
 
                 <div className="grid grid-cols-12 sm:flex sm:justify-center gap-6 sm:gap-x-12 lg:gap-x-20 mt-4">
                     <div className="col-span-6 text-center">
-                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:scale-110 ${theme == "dark" ? "text-white" : "text-black"} border border-indigo-600 ${selected == "all" ? "bg-indigo-600" : ""}`} onClick={() => {buttonClicked("all")}}>
+                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:scale-105 border ${theme == `dark` ? `text-white border-indigo-600 ${selected == "all" ? "bg-indigo-700 text-gray-100" : ""}` : `text-black border-violet-600 ${selected == "all" ? "bg-violet-700 text-gray-100" : ""}`}`} onClick={() => {buttonClicked("all")}}>
                             <span className="sm:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                             All()
                             <span className="sm:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         </button>
                     </div>
                     <div className="col-span-6 text-center">
-                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:scale-110 ${theme == "dark" ? "text-white" : "text-black"} border border-indigo-600 ${selected == "front" ? "bg-indigo-600" : ""}`} onClick={() => {buttonClicked("front")}}>
+                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:scale-105 border ${theme == `dark` ? `text-white border-indigo-600 ${selected == "front" ? "bg-indigo-700 text-gray-100" : ""}` : `text-black border-violet-600 ${selected == "front" ? "bg-violet-700 text-gray-100" : ""}`}`} onClick={() => {buttonClicked("front")}}>
                             FrontEnd()
                         </button>
                     </div>
                     <div className="col-span-6 text-center">
-                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:scale-110 ${theme == "dark" ? "text-white" : "text-black"} border border-indigo-600 ${selected == "back" ? "bg-indigo-600" : ""}`}onClick={() => {buttonClicked("back")}}>
+                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:scale-105 border ${theme == `dark` ? `text-white border-indigo-600 ${selected == "back" ? "bg-indigo-700 text-gray-100" : ""}` : `text-black border-violet-600 ${selected == "back" ? "bg-violet-700 text-gray-100" : ""}`}`} onClick={() => {buttonClicked("back")}}>
                             BackEnd()
                         </button>
                     </div>
                     <div className="col-span-6 text-center">
-                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:scale-110 ${theme == "dark" ? "text-white" : "text-black"} border border-indigo-600 ${selected == "misc" ? "bg-indigo-600" : ""}`} onClick={() => {buttonClicked("misc")}}>
+                        <button className={`col-span-6 text-center rounded px-8 py-3 text-sm font-medium transition hover:scale-105 border ${theme == `dark` ? `text-white border-indigo-600 ${selected == "misc" ? "bg-indigo-700 text-gray-100" : ""}` : `text-black border-violet-600 ${selected == "misc" ? "bg-violet-700 text-gray-100" : ""}`}`} onClick={() => {buttonClicked("misc")}}>
                         <span className="sm:hidden">&nbsp;&nbsp;&nbsp;&nbsp;</span>
                             Misc()
                         <span className="sm:hidden">&nbsp;&nbsp;&nbsp;&nbsp;</span>

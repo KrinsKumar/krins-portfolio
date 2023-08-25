@@ -21,7 +21,6 @@ const Header = () => {
         setMounted(true)
         const updateScroll = () => {
             window.scrollY >= 90 ? setScroll(true) : setScroll(false)
-           // console.log(window.scrollY)
         }
         window.addEventListener('scroll', updateScroll)
     }, [])
@@ -39,7 +38,7 @@ const Header = () => {
     }
 
     return (
-        <header className={`backdrop-filter backdrop-blur-lg ${scroll ? 'border-b bg-white bg-opacity-40' : 'border-b-0'} dark:bg-grey-900 dark:bg-opacity-40 border-gray-200 dark:border-b-0 z-30 min-w-full flex flex-col fixed`}>
+        <header className={`backdrop-filter backdrop-blur-lg ${scroll ? `border-b ${theme == "dark" ? "bg-gray-700" : "bg-white"} bg-opacity-40` : 'border-b-0'} dark:bg-grey-900 dark:bg-opacity-40 border-gray-200 dark:border-b-0 z-30 min-w-full flex flex-col fixed`}>
             <nav className='lg:w-11/12 2xl:w-4/5 w-full md:px-6 2xl:px-0 mx-auto py-4 hidden sm:flex items-center justify-between'>
                 <Link href={'/'} className={`2xl:ml-6 ${theme === "dark" ? "hover:text-violet-500" : "hover:text-rose-700"} transition-colors duration-200`}>
                     <AiFillHome size={25} />

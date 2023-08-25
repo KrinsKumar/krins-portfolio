@@ -43,8 +43,8 @@ const Hero = () => {
                 <p className={`text-lg text-gray-600 ${theme == "dark" ? "dark:text-gray-400" : ""}`} >I am an enthusiastic, and fast learning software developer student, specializing in full stack development.</p>
                 </div>
 
-                <div className="mt-8 grid gap-3 w-full sm:inline-flex cursor-pointer sm:justify-center">
-                    <a className={`inline-flex justify-center items-center gap-x-3 text-center  border border-transparent text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-4 ${theme == "dark" ? " dark:focus:ring-offset-gray-800 bg-indigo-600" : "bg-violet-700 text-white"}`} href="#">
+                <div className="mt-8 grid gap-3 w-full sm:inline-flex cursor-pointer sm:justify-center hover:scale-110">
+                    <a className={`inline-flex justify-center items-center gap-x-3 text-center  border border-transparent text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-4 ${theme == "dark" ? " dark:focus:ring-offset-gray-800 bg-indigo-600" : "bg-violet-700 text-gray-100"}`} href="#">
                         Check out my projects!
                     </a>
                 </div>
