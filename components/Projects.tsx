@@ -35,14 +35,20 @@ const Projects = () => {
                                     fill
                                     alt="Song Cover"
                                 />
+                                <div className="absolute top-2 left-2">
+                                    {project.demo ? <a href={project.demo} target="_blank"><LuExternalLink size={35} className={`md:hidden hover:scale-110 transition hover-pointer p-1 rounded-full ${theme == "dark" ? "bg-indigo-600/50" : "bg-violet-600/50"}`}/></a> : <div></div>}
+                                </div>
+                                <div className="absolute top-2 right-2">
+                                    <a href={project.gh} target="_blank"><AiFillGithub size={37} className={`md:hidden hover:scale-110 transition hover-pointer p-1 rounded-full ${theme == "dark" ? "bg-indigo-600/50" : "bg-violet-600/50"}`}/></a>
+                                </div>
                             </div>
                             <div className="flex flex-col items-start w-full text-center pt-4 gap-y-1">
-                                <p className="font-semibold truncate w-full">
-                                    <a href={project.demo} target="_blank"><LuExternalLink size={27} className="inline-block mb-1 mr-2 hover:scale-110 transition hover-pointer"/></a>
+                                <p className="font-semibold mx-auto">
+                                    {project.demo ? <a href={project.demo} target="_blank"><LuExternalLink size={27} className="md:inline-block mb-1 mr-2 hover:scale-110 transition hover-pointer hidden"/></a> : <div></div>}
                                     {project.title}
-                                    <a href={project.gh} target="_blank"><AiFillGithub size={29} className="inline-block mb-1 ml-2 hover:scale-110 transition hover-pointer"/></a>
+                                    <a href={project.gh} target="_blank"><AiFillGithub size={29} className="md:inline-block mb-1 ml-2 hover:scale-110 transition hover-pointer hidden"/></a>
                                 </p>
-                                <p className="text-neutral-400 text-sm w-full truncate">
+                                <p className="text-neutral-400 text-sm w-full">
                                     {project.description}
                                 </p>
                                 <p className="flex flex-row w-full justify-center md:gap-4 gap-2 py-2 mx-auto">

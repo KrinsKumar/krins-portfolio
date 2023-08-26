@@ -162,16 +162,16 @@ export let projects:{
         gh: "https://github.com/KrinsKumar/stream-music",
         demo: "stream-music.vercel.app",
         title: "Stream Music",
-        skills: ["next", "react", "ts", "tailwind", "supabase", "postgres"],
+        skills: ["next", "react", "ts", "supabase", "postgres"],
         image: "stream-music",
-        description: "Full Stack Spotify Clone"
+        description: "Full Stack Spotify Clone for streaming music"
     },{
         gh: "https://github.com/KrinsKumar/NoBrainer-AI_SaaS",
         demo: "https://no-brainer-ai-saa-s-concept.vercel.app/",
         title: "NoBrainer",
         skills: ["next", "react", "ts", "tailwind", "openai"],
         image: "no-brainer",
-        description: "SaaS Concept for generation"
+        description: "SaaS Concept for generating 🎨📸🎥🎵"
     },{
         gh: "https://github.com/KrinsKumar/spring-security-JWT",
         demo: undefined,
@@ -181,25 +181,25 @@ export let projects:{
         description: "JWT API security using Spring Boot"
     },{
         gh: "https://github.com/KrinsKumar/spring-security-JWT",
-        demo: undefined,
+        demo: "https://nutflix.vercel.app/",
         title: "Angular-Netflix",
         skills: ["angularjs", "ts", "bootstrap", "html"],
         image: "nutflix",
-        description: "TO BE UPDATED, image and gh and demo"
+        description: "Netflix Homepage using AngularJs"
     },{
         gh: "https://github.com/KrinsKumar/Aztech",
         demo: undefined,
         title: "Aztech - Hackhathon",
-        skills: ["nodejs", "mongodb", "js", "figma", "openai", "tailwind"],
+        skills: ["nodejs", "mongodb", "js", "figma", "openai"],
         image: "aztech",
-        description: "🚀AI quotation tool"
+        description: "Full Stack AI quotation tool for Mircom"
     },{
         gh: "https://github.com/KrinsKumar/React-LandingPage",
         demo: "cheery-melba-ac3569.netlify.app/",
         title: "React LandingPage",
         skills: ["react", "js"],
         image: "landing",
-        description: "A landing page using React"
+        description: "A Business landing page using React"
     },{
         gh: "https://github.com/KrinsKumar/spring-firstProject",
         demo: undefined,
@@ -213,7 +213,7 @@ export let projects:{
         title: "Movies API - Node",
         skills: ["nodejs", "mongodb"],
         image: "movies",
-        description: "An API for movies"
+        description: "An API for movies powered by MongoDB"
     },{
         gh: "https://github.com/KrinsKumar/Responsive-dashboard",
         demo: "https://krinskumar.github.io/Responsive-dashboard/",
@@ -227,7 +227,7 @@ export let projects:{
         title: "This Portfolio",
         skills: ["next", "ts", "tailwind"],
         image: "portfolio",
-        description: "This portflio you are on."
+        description: "This portflio you are on right now"
     },{
         gh: "https://github.com/KrinsKumar/sketch.io",
         demo: "https://krinskumar.github.io/sketch.io/",

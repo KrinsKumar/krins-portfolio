@@ -15,7 +15,7 @@ const Header = () => {
     const [scroll, setScroll] = useState(false)
     const { theme, setTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
-    const navs = ['Home', 'Skills', 'Projects', 'Contact']
+    const navs = ['Home', 'About', 'Skills', 'Projects', 'Contact']
 
     useEffect(() => {
         setMounted(true)
