@@ -41,7 +41,7 @@ const Hero = () => {
 
                 <div className="mt-5 max-w-3xl text-center mx-auto">
                     <p className={`text-lg text-gray-600 ${theme == "dark" ? "dark:text-gray-400" : ""}`} >
-                        I am an enthusiastic, and fast learning <span className={`${theme == "dark" ? "text-indigo-600" : "text-violet-700"} font-bold`}>software developer </span> 
+                        I am an enthusiastic, and fast learning <span className={`${theme == "dark" ? "text-indigo-600 border-indigo-600" : "text-violet-700 border-violet-700"} border-b-2 font-bold`}>software developer </span> 
                         student based in Toronto, specializing in full stack development.
                     </p>
                 </div>
