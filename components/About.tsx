@@ -30,7 +30,7 @@ const About = () => {
                         </h2>
                         <br/>
                         <p className={`${theme == "light" ? "text-gray-700" : "text-gray-400"}`}>
-                            I am a software developer based on Toronto. I am working as a <span className={`${ theme == "dark" ? "text-indigo-600" : "text-violet-700"}`}>Reserach Assistant</span> at Seneca Innovation
+                            I am a full stack software developer. I am working as a <span className={`${ theme == "dark" ? "text-indigo-600" : "text-violet-700"}`}>Reserach Assistant</span> at Seneca Innovation
                         </p>
                         <br/>
                         <p className={`${theme == "light" ? "text-gray-700" : "text-gray-400"}`}>
