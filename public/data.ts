@@ -20,6 +20,14 @@ export let skills = [
         category: ["front"],
         src:"next",
     },{
+        name:"Redis",
+        category: ["back"],
+        src:"redis",
+    },{
+        name:"Kafka",
+        category: ["back"],
+        src:"kafka",
+    },{
         name:"AWS",
         category: ["all"],
         src:"aws",
@@ -64,6 +72,10 @@ export let skills = [
         category: ["all"],
         src:"github",
     },{
+        name:"Postman",
+        category: ["all"],
+        src:"postman",
+    },{
         name:"Docker",
         category: ["back"],
         src:"docker",
@@ -83,6 +95,10 @@ export let skills = [
         name:"MySql",
         category: ["back"],
         src:"mysql",
+    },{
+        name:"Jest",
+        category: ["back"],
+        src:"jest",
     },{
         name:"HTML",
         category: ["front"],
@@ -115,6 +131,10 @@ export let skills = [
         name:"Jira",
         category: ["misc"],
         src:"jira",
+    },{
+        name:"Netlify",
+        category: ["misc"],
+        src:"netlify",
     },{
         name:"Office 365",
         category: ["misc"],
@@ -176,9 +196,9 @@ export let projects:{
         gh: "https://github.com/KrinsKumar/spring-security-JWT",
         demo: undefined,
         title: "Spring Security JWT",
-        skills: ["java", "sb", "postgres"],
+        skills: ["java", "sb", "postgres", "postman"],
         image: "java-jwt",
-        description: "JWT API security using Spring Boot"
+        description: "Rest API on Spring Boot with JWT security"
     },{
         gh: "https://github.com/KrinsKumar/spring-security-JWT",
         demo: "https://nutflix.vercel.app/",
@@ -186,6 +206,13 @@ export let projects:{
         skills: ["angularjs", "ts", "bootstrap", "html"],
         image: "nutflix",
         description: "Netflix Homepage using AngularJs"
+    },{
+        gh: "https://github.com/KrinsKumar/ChatBackend-Redis",
+        demo: undefined,
+        title: "Socket Chat Architecture",
+        skills: ["redis", "docker", "next", "ts", "postman"],
+        image: "chat-node",
+        description: "A scalable chat architecture using Redis"
     },{
         gh: "https://github.com/KrinsKumar/Aztech",
         demo: undefined,
@@ -204,14 +231,14 @@ export let projects:{
         gh: "https://github.com/KrinsKumar/spring-firstProject",
         demo: undefined,
         title: "Spring RestAPI",
-        skills: ["java", "sb", "postgres", "docker"],
+        skills: ["java", "sb", "postgres", "docker", "postman"],
         image: "simple",
         description: "My First Spring Boot with PostgreSQL and Docker"
     },{
         gh: "https://github.com/KrinsKumar/movies-API",
         demo: undefined,
         title: "Movies API - Node",
-        skills: ["nodejs", "mongodb"],
+        skills: ["nodejs", "mongodb", "postman"],
         image: "movies",
         description: "An API for movies powered by MongoDB"
     },{
